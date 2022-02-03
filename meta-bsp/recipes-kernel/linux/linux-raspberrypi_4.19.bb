@@ -57,3 +57,4 @@ do_deploy:append() {
 }
 
 FILES:${KERNEL_PACKAGE_NAME}-devicetree += "/boot/overlays"
+FILES:${KERNEL_PACKAGE_NAME}-dbg += "/usr/lib/debug"

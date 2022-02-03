@@ -24,3 +24,5 @@ do_configure:append() {
 
 DEPENDS += "openssl-native"
 HOST_EXTRACFLAGS += "-I${STAGING_INCDIR_NATIVE}"
+
+FILES:${KERNEL_PACKAGE_NAME}-dbg += "/usr/lib/debug"
