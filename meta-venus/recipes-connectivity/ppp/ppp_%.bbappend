@@ -2,10 +2,11 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
 inherit daemontools
 
-SRC_URI += "\
-    file://0001-pppd-add-support-for-defaultroute-metric-option.patch \
-    file://0002-pppd-clear-resolv.conf-on-link-down.patch \
-"
+# FIXME
+#SRC_URI += "\
+#   file://0001-pppd-add-support-for-defaultroute-metric-option.patch \
+#    file://0002-pppd-clear-resolv.conf-on-link-down.patch \
+#"
 
 DAEMONTOOLS_RUN = "${sbindir}/pppd call provider nodetach"
 DAEMONTOOLS_DOWN = "1"

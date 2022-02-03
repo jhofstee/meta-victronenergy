@@ -12,9 +12,10 @@ SRC_URI += "\
     file://store_watchdog_error.sh \
     file://services.sh \
     file://vrm-online.sh \
-    file://0001-Use-MemAvailable-instead-of-MemFree.patch \
-    file://0002-add-test-prescaler-to-run-test-less-often.patch \
 "
+
+# FIXME: file://0001-Use-MemAvailable-instead-of-MemFree.patch
+# FIXME: file://0002-add-test-prescaler-to-run-test-less-often.patch
 
 INITSCRIPT_PACKAGES = "${PN}"
 INITSCRIPT_NAME:${PN} = "watchdog"

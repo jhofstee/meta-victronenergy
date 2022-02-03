@@ -3,11 +3,12 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 PACKAGECONFIG = "deprecated readline tools"
 
 SRC_URI += "\
-    file://0001-Make-reverse-service-discovery-configurable.patch \
     file://ble.conf \
     file://init.default \
     file://0001-correct-the-firmware-directory.patch \
 "
+
+# FIXME: file://0001-Make-reverse-service-discovery-configurable.patch
 
 EXTRA_OECONF += "\
     --localstatedir=/data/var \

@@ -6,13 +6,15 @@ inherit localsettings
 
 SRC_URI += "\
     file://0001-Don-t-spam-syslog-on-reload-and-not-using-hosts-file.patch \
-    file://0002-Log-only-changes-to-nameserver-list.patch \
     file://dnsmasq.ap.conf \
     file://localsettings \
     file://resolv.conf \
     file://resolv-watch \
     file://rw-init \
 "
+
+# FIXME
+# file://0002-Log-only-changes-to-nameserver-list.patch
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 hostap = ""
