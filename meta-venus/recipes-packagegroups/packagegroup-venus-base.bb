@@ -41,6 +41,7 @@ RDEPENDS:${PN} += "\
     can-utils-access \
     can-utils-cantest \
     connman \
+    connman-client \
     connman-tools \
     crash-logger \
     cronie \
