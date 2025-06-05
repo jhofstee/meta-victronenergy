@@ -1,6 +1,6 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-PACKAGECONFIG = "deprecated readline tools"
+#PACKAGECONFIG = "deprecated readline tools"
 
 SRC_URI += "\
     file://ble.conf \
