@@ -1,41 +1,49 @@
-From b3636ff37f534e70ea6478136cda78c425257667 Mon Sep 17 00:00:00 2001
+From 93eedc267b000afaf05c4cea0281bd4badb8e840 Mon Sep 17 00:00:00 2001
 From: Jeroen Hofstee <jhofstee@victronenergy.com>
 Date: Fri, 16 May 2025 10:54:14 +0200
 Subject: [PATCH] disable erroring on legacy ciphers
 
 Upstream-Status: Inappropriate [Venus OS specific]
 ---
- src/rust/src/lib.rs | 17 ++---------------
- 1 file changed, 2 insertions(+), 15 deletions(-)
+ src/rust/src/lib.rs | 25 ++-----------------------
+ 1 file changed, 2 insertions(+), 23 deletions(-)
 
 diff --git a/src/rust/src/lib.rs b/src/rust/src/lib.rs
-index 9308e0c..01244c6 100644
+index dc4373915..d4141409d 100644
 --- a/src/rust/src/lib.rs
 +++ b/src/rust/src/lib.rs
-@@ -39,21 +39,8 @@ fn is_fips_enabled() -> bool {
+@@ -55,29 +55,8 @@ fn is_fips_enabled() -> bool {
  
  #[cfg(CRYPTOGRAPHY_OPENSSL_300_OR_GREATER)]
- fn _initialize_providers() -> CryptographyResult<LoadedProviders> {
+ fn _initialize_providers(py: pyo3::Python<'_>) -> CryptographyResult<LoadedProviders> {
 -    // As of OpenSSL 3.0.0 we must register a legacy cipher provider
 -    // to get RC2 (needed for junk asymmetric private key
 -    // serialization), RC4, Blowfish, IDEA, SEED, etc. These things
 -    // are ugly legacy, but we aren't going to get rid of them
 -    // any time soon.
--    let load_legacy = env::var("CRYPTOGRAPHY_OPENSSL_NO_LEGACY")
--        .map(|v| v.is_empty() || v == "0")
--        .unwrap_or(true);
+-
+-    let load_legacy = !cfg!(CRYPTOGRAPHY_BUILD_OPENSSL_NO_LEGACY)
+-        && !env::var("CRYPTOGRAPHY_OPENSSL_NO_LEGACY").is_ok_and(|v| !v.is_empty() && v != "0");
+-
 -    let legacy = if load_legacy {
 -        let legacy_result = provider::Provider::load(None, "legacy");
--        _legacy_provider_error(legacy_result.is_ok())?;
--        Some(legacy_result?)
+-        if legacy_result.is_err() {
+-            let message = crate::utils::cstr_from_literal!("OpenSSL 3's legacy provider failed to load. Legacy algorithms will not be available. If you need those algorithms, check your OpenSSL configuration.");
+-            let warning_cls = pyo3::exceptions::PyWarning::type_object(py).into_any();
+-            pyo3::PyErr::warn(py, &warning_cls, message, 1)?;
+-
+-            None
+-        } else {
+-            Some(legacy_result?)
+-        }
 -    } else {
 -        None
 -    };
 +    // legacy cipher are not supported on Venus OS
 +    let legacy = None;
      let _default = provider::Provider::load(None, "default")?;
-     Ok(LoadedProviders { legacy, _default })
- }
+     Ok(LoadedProviders {
+         legacy,
 -- 
 2.43.0
 
