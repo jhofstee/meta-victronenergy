@@ -12,7 +12,6 @@ GROUPADD_PARAM:${PN} = "shelly"
 USERADD_PARAM:${PN} = "--no-create-home --shell /bin/false -g shelly shelly"
 
 RDEPENDS:${PN} = " \
-    python3-aiohttp \
     python3-aioshelly \
     python3-asyncio \
     python3-core \

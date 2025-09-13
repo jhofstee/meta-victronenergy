@@ -108,6 +108,6 @@ NETMON:ccgx = ""
 NETMON:canvu500 = ""
 RDEPENDS:${PN}:append = "${NETMON}"
 
-DBUS_SHELLY = " dbus-shelly"
+DBUS_SHELLY = ""
 DBUS_SHELLY:ccgx = ""
 RDEPENDS:${PN}:append = "${DBUS_SHELLY}"
