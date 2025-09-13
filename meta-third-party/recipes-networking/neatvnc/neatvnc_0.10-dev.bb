@@ -7,10 +7,6 @@ DEPENDS += "aml gmp libdrm libjpeg-turbo nettle pixman"
 inherit meson pkgconfig
 
 SRC_URI = "git://github.com/any1/neatvnc;protocol=https;branch=master"
-SRC_URI += " \
-	file://0001-Revert-Only-allow-a-curated-set-of-modifiers.patch \
-	file://0001-tolower_and_remove_ws-always-increment-the-src-point.patch \
-	file://0002-fix-the-Sec-WebSocket-Protocol.patch \
-"
-SRCREV = "8eba00a0285a2403a1b71619d6d47afa2f6466ac"
+
+SRCREV = "4962e0af5d550b2c4fd34c79dbdca543f233d87c"
 
