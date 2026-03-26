@@ -26,7 +26,6 @@ EXTRA_OECONF = "--enable-fpm \
                 ${COMMON_EXTRA_OECONF} \
 "
 
-PACKAGECONFIG[opcache] = "--enable-opcache,--disable-opcache --disable-opcache-jit"
 PACKAGECONFIG[sockets] = "--enable-sockets,--disable-sockets"
 PACKAGECONFIG[zlib] = "--with-zlib=${STAGING_LIBDIR}/..,-without-zlib,zlib"
 PACKAGECONFIG[iconv] = "--with-iconv=${STAGING_LIBDIR}/..,--without-iconv,virtual/libiconv"
