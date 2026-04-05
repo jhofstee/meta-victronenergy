@@ -5,7 +5,6 @@ inherit packagegroup
 
 RDEPENDS:${PN} = " \
     node-red-venus \
-    signalk-server \
     sudo \
 "
 
