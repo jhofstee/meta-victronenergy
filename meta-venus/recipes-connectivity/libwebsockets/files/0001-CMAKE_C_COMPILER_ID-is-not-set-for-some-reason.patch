@@ -1,0 +1,26 @@
+From 4b3bbd0c439f4907f76cc1db87ffab73b3d9ddad Mon Sep 17 00:00:00 2001
+From: Jeroen Hofstee <jhofstee@victronenergy.com>
+Date: Sat, 4 Apr 2026 16:04:15 +0000
+Subject: [PATCH] CMAKE_C_COMPILER_ID is not set for some reason
+
+Upstream-Status: Inappropriate [To be looked at]
+---
+ lib/tls/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/lib/tls/CMakeLists.txt b/lib/tls/CMakeLists.txt
+index 13cb71493..30e213329 100644
+--- a/lib/tls/CMakeLists.txt
++++ b/lib/tls/CMakeLists.txt
+@@ -314,7 +314,7 @@ endif()
+ if (DEFINED LIB_LIST)
+ 	set(CMAKE_REQUIRED_LIBRARIES ${LIB_LIST})
+ endif()
+-if(UNIX AND (CMAKE_C_COMPILER_ID STREQUAL "GNU" OR CMAKE_C_COMPILER_ID MATCHES "Clang"))
++if(UNIX AND (CMAKE_COMPILER_IS_GNUCC OR CMAKE_C_COMPILER_ID MATCHES "Clang"))
+   check_c_source_compiles("int main() { long long x = 0; __atomic_fetch_add(&x, 1, __ATOMIC_SEQ_CST); return 0; }" HAVE_WORKING_ATOMIC_64)
+   if(HAVE_WORKING_ATOMIC_64)
+     set(LWS_ATOMIC_LIB "")
+-- 
+2.43.0
+
