@@ -8,7 +8,6 @@ RDEPENDS:${PN} = "python3-core python3-dbus python3-lxml python3-pprint"
 UPSTREAM_CHECK_GITTAGREGEX = "v(?P<pver>\S+)"
 SRC_URI = "git://github.com/victronenergy/dbus-tools.git;branch=master;protocol=https"
 SRCREV = "53b18b055f101c74f9beb13ed2199b95e644ada1"
-S = "${WORKDIR}/git"
 
 do_install () {
     install -d ${D}${bindir}/

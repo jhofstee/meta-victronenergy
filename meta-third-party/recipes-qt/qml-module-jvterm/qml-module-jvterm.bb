@@ -2,7 +2,6 @@ inherit qt6-qmake pkgconfig
 
 SRC_URI = "git://github.com/jhofstee/qml-module-jvterm.git;protocol=https;branch=master"
 SRCREV = "ec825b50beb582b256cc292d27d8da1946ea558b"
-S = "${WORKDIR}/git"
 
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://LICENSE.MIT;md5=f71155f18b4006ffefd262e0fd046bad"

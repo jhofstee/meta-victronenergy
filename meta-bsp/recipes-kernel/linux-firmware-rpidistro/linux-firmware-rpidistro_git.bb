@@ -28,7 +28,6 @@ SRC_URI = "git://github.com/RPi-Distro/firmware-nonfree;branch=bookworm;protocol
 "
 SRCREV = "c9d3ae6584ab79d19a4f94ccf701e888f9f87a53"
 PV = "20240709-2~bpo12+1+rpt3"
-S = "${WORKDIR}/git"
 
 do_configure[noexec] = "1"
 do_compile[noexec] = "1"

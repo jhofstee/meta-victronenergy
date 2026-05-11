@@ -13,5 +13,4 @@ SRC_URI += " \
 	file://0002-fix-the-Sec-WebSocket-Protocol.patch \
 "
 SRCREV = "8eba00a0285a2403a1b71619d6d47afa2f6466ac"
-S = "${WORKDIR}/git"
 

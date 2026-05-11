@@ -10,7 +10,6 @@ DEPENDS = "libftdi"
 SRC_URI = "git://github.com/aehparta/ftdi-bitbang.git;branch=master;protocol=https"
 SRC_URI += "file://0001-fix-a-compile-error-with-open.patch"
 SRCREV = "cf11d84b46946e2e99561083795e6336261affb7"
-S = "${WORKDIR}/git"
 PR = "1"
 
 do_configure:prepend () {

@@ -12,7 +12,6 @@ SRC_URI = " \
     file://com.victronenergy.temprelay.conf \
 "
 SRCREV = "266032a86034cb4f47ba4d5595353d8eec23b0bf"
-S = "${WORKDIR}/git"
 
 RDEPENDS:${PN} = " \
     localsettings \

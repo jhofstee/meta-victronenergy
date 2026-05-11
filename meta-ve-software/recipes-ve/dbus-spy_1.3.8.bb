@@ -13,6 +13,5 @@ SRC_URI = " \
     gitsm://github.com/victronenergy/dbus-spy.git;branch=master;protocol=https \
 "
 SRCREV = "0d86265aedae5d158fa2f0543c8342890cbb08b6"
-S = "${WORKDIR}/git"
 QMAKE_PROFILES = "${S}/software/dbus-spy.pro"
 

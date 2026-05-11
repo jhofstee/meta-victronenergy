@@ -12,5 +12,4 @@ SRC_URI = " \
     file://0001-don-t-error-on-warnings-in-a-release-build.patch \
 "
 SRCREV = "8ad2cc39eb420c22dde7e49c01bde916b7bc58cc"
-S = "${WORKDIR}/git"
 

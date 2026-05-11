@@ -12,7 +12,6 @@ SRC_URI = " \
     file://start-digitalinputs.sh \
 "
 SRCREV = "3f899952294f5b5da0baac0b34e5b006fcdf0734"
-S = "${WORKDIR}/git"
 
 RDEPENDS:${PN} = " \
     localsettings \

@@ -7,7 +7,6 @@ inherit allarch
 UPSTREAM_CHECK_GITTAGREGEX = "v(?P<pver>\S+)"
 SRC_URI = "git://github.com/victronenergy/atmel-adc-and-slcan.git;branch=master;protocol=https;lfs=0"
 SRCREV = "f4ad881e55eb7fe4f75da3b9787d0714d4db4d86"
-S = "${WORKDIR}/git"
 
 FIRMWARE_DIR = "/opt/victronenergy/firmware"
 BLOB = "samc21_slcan_adc.bin"

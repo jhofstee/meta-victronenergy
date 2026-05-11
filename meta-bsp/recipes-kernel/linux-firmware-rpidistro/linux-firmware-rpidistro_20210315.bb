@@ -29,7 +29,6 @@ SRC_URI = "git://github.com/RPi-Distro/firmware-nonfree;branch=bullseye;protocol
 "
 SRCREV = "541e5a05d152e7e6f0d9be45622e4a3741e51c02"
 PV = "20210315-3+rpt7"
-S = "${WORKDIR}/git"
 
 do_configure[noexec] = "1"
 do_compile[noexec] = "1"

@@ -14,7 +14,6 @@ SRC_URI = " \
 "
 SRCREV = "efafc6bcc99197027cf995cf507ac715531b663a"
 
-S = "${WORKDIR}/git"
 
 DAEMONTOOLS_RUN = "${@softlimit(d, data=100000000, stack=1000000, all=100000000)} ${bindir}/start.sh TTY"
 DAEMONTOOLS_DOWN = "1"

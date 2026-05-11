@@ -8,5 +8,4 @@ SRC_URI = " \
     git://github.com/any1/aml;protocol=https;branch=master \
 "
 SRCREV = "b83f3576ce4187d9285f06e9066ef43a691464d4"
-S = "${WORKDIR}/git"
 

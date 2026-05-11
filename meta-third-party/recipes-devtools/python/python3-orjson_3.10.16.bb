@@ -12,7 +12,6 @@ LIC_FILES_CHKSUM = " \
 SRC_URI += "file://fix-compilation-error-for-orjson.patch"
 SRC_URI[sha256sum] = "d2aaa5c495e11d17b9b93205f5fa196737ee3202f000aaebf028dc9a73750f10"
 require ${BPN}-crates.inc
-S = "${WORKDIR}/git"
 
 PYPI_PACKAGE = "orjson"
 

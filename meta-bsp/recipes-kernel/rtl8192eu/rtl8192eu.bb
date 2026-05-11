@@ -8,7 +8,6 @@ SRC_URI = " \
 "
 SRCREV = "a5ac6789a78a4f5ca0bf157a0f62385ea034cb9c"
 
-S = "${WORKDIR}/git"
 EXTRA_OEMAKE += "KSRC=${STAGING_KERNEL_DIR}"
 
 inherit module

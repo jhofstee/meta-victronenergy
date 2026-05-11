@@ -35,7 +35,6 @@ SRC_URI = " \
     gitsm://github.com/victronenergy/gui-v2.git;branch=main;protocol=ssh;user=git \
 "
 SRCREV = "755e0492c089b88f625262a21ce8768cb1456179"
-S = "${WORKDIR}/git"
 
 do_install:append() {
     rm -r ${D}/usr

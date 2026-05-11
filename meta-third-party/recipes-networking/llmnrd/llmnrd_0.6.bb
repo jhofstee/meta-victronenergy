@@ -8,7 +8,6 @@ SRC_URI = " \
     file://0001-llmnrd-set-stdout-to-line-buffering.patch \
 "
 SRCREV = "33c661b515890df780d55c0011d06d1cc698ff65"
-S = "${WORKDIR}/git"
 
 DAEMONTOOLS_RUN = "setuidgid nobody ${sbindir}/llmnrd -H venus -6"
 DAEMONTOOLS_LOG_DIR = "${localstatedir}/volatile/log/${PN}"

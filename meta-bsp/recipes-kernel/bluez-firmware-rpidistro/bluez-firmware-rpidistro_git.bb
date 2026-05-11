@@ -30,7 +30,6 @@ SRC_URI = " \
 SRCREV = "e7fd166981ab4bb9a36c2d1500205a078a35714d"
 PV = "1.2-4+rpt8"
 
-S = "${WORKDIR}/git"
 
 inherit allarch
 

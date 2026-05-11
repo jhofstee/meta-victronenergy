@@ -17,7 +17,6 @@ SRC_URI = " \
     gitsm://github.com/victronenergy/${BPN}.git;branch=master;protocol=https \
 "
 SRCREV = "669e1846c85d64661c6b5f59e8bc5a394570c98e"
-S = "${WORKDIR}/git"
 
 do_install () {
     oe_runmake DESTDIR=${D} install

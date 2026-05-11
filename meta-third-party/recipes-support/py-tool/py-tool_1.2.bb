@@ -7,7 +7,6 @@ SRC_URI += "file://0001-adjust-the-makefile-for-OE.patch"
 SRCREV = "e951337da2756fdeba1e812ec5646573bc806a88"
 UPSTREAM_CHECK_GITTAGREGEX = "V(?P<pver>\S+)"
 
-S = "${WORKDIR}/git"
 
 do_compile() {
     rm -rf ${S}/py-tool

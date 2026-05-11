@@ -12,7 +12,6 @@ SRC_URI = " \
 "
 SRCREV = "fb30ea353fade1f17d4330bc2bb233f7f9f842df"
 PR = "r1"
-S = "${WORKDIR}/git"
 
 RDEPENDS:${PN} = " \
     localsettings \

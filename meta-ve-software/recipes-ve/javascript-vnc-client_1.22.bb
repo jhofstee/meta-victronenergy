@@ -14,7 +14,6 @@ SRC_URI = " \
 "
 SRCREV = "8618367e760bd563016da68c0fdab929c529132d"
 
-S = "${WORKDIR}/git"
 BASE_DIR = "${WWW_ROOT}/gui-v1"
 DEST_DIR = "${D}${BASE_DIR}"
 

@@ -13,7 +13,6 @@ SRC_URI = "git://github.com/NXPmicro/imx-kobs.git;branch=master;protocol=https \
            file://0001-Add-missing-includes-as-pointed-out-by-musl.patch \
 "
 
-S = "${WORKDIR}/git"
 
 inherit autotools pkgconfig
 

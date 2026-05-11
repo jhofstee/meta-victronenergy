@@ -10,7 +10,6 @@ UPSTREAM_CHECK_GITTAGREGEX = "v(?P<pver>\S+)"
 SRC_URI = "git://github.com/halfgaar/FlashMQ.git;branch=v1.23.x;protocol=https"
 SRCREV = "f7921c633b3a4a3827d3736cf76952bed3ada363"
 
-S = "${WORKDIR}/git"
 EXTRA_OECMAKE = "-DCMAKE_BUILD_TYPE=Release"
 OECMAKE_CXX_FLAGS += "-Wno-psabi"
 

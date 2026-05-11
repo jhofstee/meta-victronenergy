@@ -8,7 +8,6 @@ inherit pkgconfig
 DEPENDS += "glib-2.0 gupnp libsoup"
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-S = "${WORKDIR}/git"
 
 inherit daemontools useradd
 

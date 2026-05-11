@@ -15,7 +15,6 @@ SRC_URI += "\
     file://0004-reject-responses-that-fail-validation.patch \
 "
 
-S = "${WORKDIR}/git"
 
 inherit setuptools3
 

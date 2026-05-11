@@ -21,7 +21,6 @@ SRC_URI = " \
     file://start-serial.sh \
 "
 SRCREV = "1883cc4d303e81f1131cb420ac6cc6d7fbeeb9d7"
-S = "${WORKDIR}/git"
 
 DAEMONTOOLS_RUN = "${bindir}/${PN}.py"
 DAEMONTOOLS_LOG_DIR = "${DAEMONTOOLS_LOG_DIR_PREFIX}/${PN}"

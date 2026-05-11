@@ -14,7 +14,6 @@ SRC_URI = " \
     file://config \
 "
 SRCREV = "108b8e97b77acba6206cdc69e419531d17380c7a"
-S = "${WORKDIR}/git"
 
 # note: weston is needed since it provides the default terminal
 RDEPENDS:${PN} += "xkeyboard-config weston"

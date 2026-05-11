@@ -10,7 +10,6 @@ SRC_URI = " \
 "
 SRCREV = "af3a408d6399655b0db23c2c8720436ca725ca47"
 
-S = "${WORKDIR}/git"
 
 inherit module
 

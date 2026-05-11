@@ -8,7 +8,6 @@ UPSTREAM_CHECK_GITTAGREGEX = "v(?P<pver>\S+)"
 SRC_URI = "gitsm://github.com/victronenergy/dbus-switch.git;branch=main;protocol=https"
 
 SRCREV = "9b81cf3b008611c260ed99bb775b8da92ec6be0f"
-S = "${WORKDIR}/git"
 
 RDEPENDS:${PN} = " \
     localsettings \

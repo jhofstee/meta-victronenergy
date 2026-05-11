@@ -10,7 +10,6 @@ RDEPENDS:${PN} = "bash python3-core python3-dbus"
 UPSTREAM_CHECK_GITTAGREGEX = "(?P<pver>\S+)"
 SRC_URI = "git://github.com/victronenergy/dbus-recorder.git;branch=master;protocol=https"
 SRCREV = "131bb85bb7e9c9eeedad03dd6e3b0666fb260587"
-S = "${WORKDIR}/git"
 
 do_install () {
     install -d ${D}/${bindir}

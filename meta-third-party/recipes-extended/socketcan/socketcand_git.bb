@@ -7,7 +7,6 @@ LIC_FILES_CHKSUM = " \
 
 SRC_URI = "git://github.com/linux-can/socketcand;branch=master;protocol=https"
 SRCREV = "7b5e91ec656b33c325db2f9136daebb9e357bb65"
-S = "${WORKDIR}/git"
 
 inherit meson pkgconfig
 

@@ -11,7 +11,6 @@ SRC_URI = " \
     file://com.victronenergy.generator-starter.conf \
 "
 SRCREV = "e92e637d0dac8a71371c2a2009273783f8b5495f"
-S = "${WORKDIR}/git"
 
 RDEPENDS:${PN} = " \
     localsettings \

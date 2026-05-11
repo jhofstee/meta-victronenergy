@@ -13,5 +13,4 @@ UBOOT_SRC_URI ?= ""
 SRC_URI = "${UBOOT_SRC_URI}"
 INSANE_SKIP += "src-uri-bad"
 
-S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"

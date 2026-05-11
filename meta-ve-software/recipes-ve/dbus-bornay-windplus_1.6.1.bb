@@ -9,7 +9,6 @@ SRC_URI = "\
 "
 SRCREV = "c3e415c97835ae3ddff0c4cdb88bf04cfb5e1df3"
 
-S = "${WORKDIR}/git"
 
 inherit gmakevelib
 inherit daemontools

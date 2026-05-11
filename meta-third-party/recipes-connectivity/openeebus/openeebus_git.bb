@@ -9,7 +9,6 @@ SRC_URI = " \
 "
 SRCREV = "d9a9253678e2e252534eec7a0ae6c1f60a06b785"
 
-S = "${WORKDIR}/git"
 
 DEPENDS = "avahi cjson libwebsockets openssl"
 

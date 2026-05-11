@@ -11,7 +11,6 @@ SRC_URI = " \
 "
 
 SRCREV = "5edffb068ed0e0fa6119107b2aef9f18fb5c553b"
-S = "${WORKDIR}/git"
 UPSTREAM_CHECK_GITTAGREGEX = "v(?P<pver>\S+)"
 
 KERNEL_CONFIG_COMMAND = "oe_runmake -C ${S} O=${B} ${KERNEL_CONFIG}"

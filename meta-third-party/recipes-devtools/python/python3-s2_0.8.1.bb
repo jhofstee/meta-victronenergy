@@ -20,6 +20,5 @@ RDEPENDS:${PN} += " \
 SRC_URI = "git://github.com/flexiblepower/s2-python.git;branch=main;protocol=https"
 SRC_URI += "file://0001-fix-license-entry.patch"
 SRCREV = "169af01bf46d13d48834f18ed135a8f2ba91638c"
-S = "${WORKDIR}/git"
 
 inherit python_setuptools_build_meta

@@ -16,7 +16,6 @@ SRC_URI = " \
 "
 SRCREV = "35fb7f1db71bd05add5c38856d1fe8262b367075"
 
-S = "${WORKDIR}/git"
 
 RDEPENDS:${PN} = " \
     dbus-systemcalc-py \

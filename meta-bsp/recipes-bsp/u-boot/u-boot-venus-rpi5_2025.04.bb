@@ -19,7 +19,6 @@ DEPENDS += "\
 SRCREV = "502120fe1cbadcb49dbafe15860ae14ce87287f0"
 SRC_URI = "git://github.com/victronenergy/u-boot;protocol=https;branch=rpi_v2025.04"
 
-S = "${WORKDIR}/git"
 B = "${WORKDIR}/build"
 
 inherit pkgconfig
